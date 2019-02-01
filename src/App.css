@@ -2,9 +2,38 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+h1{
+  color: #33fff6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+h2{
+  text-align: left;
+  color: slategray;
+}
+p{
+  text-align: left;
+  size: 120%;
+  color: lightslategray;
+
+}
+#bNotes{
+  
+}
+#bTime{
+  text-align: right;
+}
+
+#birdList{
+  border: 2px black dotted;
+  border-radius: 5px;
+  width: 80%;
+  position: relative;
+  float: centre;
+}
+.bird{
+  border-bottom: 1px black solid;
 }
 
 .App-header {
@@ -22,11 +51,4 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

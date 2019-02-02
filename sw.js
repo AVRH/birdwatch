@@ -9,3 +9,20 @@ if ('serviceWorker' in navigator) {
       });
     });
   }
+
+  var cacheName = 'BIRD_CACHE'
+  var toCache = [
+      '/',
+      '/components'
+  ]
+  self.addEventListener('install', function(event) {
+    // Perform install steps
+    event.waitUntil(
+      caches.open(cacheName)
+        .then(function(cache) {
+          console.log('Opened cache');
+          return cache.addAll(toCache);
+        })
+    );
+  });
+  

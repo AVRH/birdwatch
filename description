@@ -1,0 +1,32 @@
+My solution is a react web application running on all major browsers (geolocation features might not be available on all IE versions, but this 
+does not stop the application from working.)
+
+After the main page has once been loaded online, the app works offline and data is stored locally on the device. 
+
+If allowed by the user, the app keeps track of users position and records the coordinates where each observation was made. 
+Geolocation was made using window.navigator.golocation, which allows continuous tracking of user's position and thus up to date information
+on current coordinates.
+
+On the list screen, user can see their observations, containing information on time, species, rarity of the species and notes. 
+
+User can also change the ordering of the listed observations. Observations can be ordered by species (alphabetically on descending order)
+by time (newest first) or by rarity (from extra rare to common). 
+
+On the add observation screen user can add new observations. 
+
+User is required to input species and notes, and choose the rarity of the species
+from a dropdown menu. If there are no notes, the field can be left empty and observation saved without notes. 
+Location and time of the observation are created automatically. 
+If user chooses not to record an observation, clickin the cancel button will navigate user back to the list screen and discard all
+entered data. 
+
+I had a good experience creating this application.
+Most of the work was similar to other university assignments, so I was comfortable with the work. 
+I had not looked into offline functionality before, so I had to do some reading beforehand. 
+The implementation of any of the asked features was not difficult, although with geolocation I had to do some reading as well. 
+
+
+
+
+
+

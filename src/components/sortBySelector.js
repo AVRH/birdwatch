@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const SortBy = ({handleChange}) => {
     return(
-        <div>
+        <div id="sortBy">
         Sort By:<select name='sortBy' onChange={handleChange}>
             <option value='time'>Time</option>
             <option value='rarity'>Rarity</option>

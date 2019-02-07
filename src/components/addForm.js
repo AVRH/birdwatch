@@ -3,22 +3,29 @@ import PropTypes from 'prop-types'
 
 const AddForm = ({speciesValue, speciesChange, rarityChange, noteValue, noteChange, submit}) => {
     return(
-        <div>
+        <div id="addForm">
             <form onSubmit={submit}>
+                <div>
                 Species: <input
                 value={speciesValue}
                 onChange={speciesChange}
                     />
+                </div>
+                <div>
                 Rarity: <select name = "rarity" onChange={rarityChange}>
                     <option value = "common">common</option>
                     <option value = "rare">rare</option>
                     <option value = "xtra rare">extra rare</option>
                 </select>
+                </div>
+                <div>
                 notes: <textarea
                     value={noteValue}
                     onChange={noteChange}
                 ></textarea>
-                <button type = "submit">Add</button>
+                </div>
+                <button id="submit" type = "submit">Add</button>
+                
             </form>
         </div>
     )

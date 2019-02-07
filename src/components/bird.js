@@ -1,24 +1,23 @@
 import React from 'react'
-import ReadMoreReact from 'read-more-react';
 import PropTypes from 'prop-types'
+import ShowMore from 'react-show-more'
 
 const Bird = ({bird}) => {
-    //Render one single bird object
-    //Due to incremental adding of new features, rendering location contains checks if bird object 
-    //contains location or not, as the data saved earlier might not contain the newest features
-    
+//render birds object
+//as extra rare is saved as xtra rare for sorting reasons, check if the rarity of the bird is xtra rare, and 
+//if it is, render extra rare to screen for easier readability 
+//Show More from https://www.npmjs.com/package/react-show-more is used to implement show more and less links for notes
     return(
         <div className="bird">
+            <h2>{bird.species}</h2>
             <p id="bTime">{bird.time.date} </p>
             <p id="bTime"> {bird.time.hour}</p>
-            <h2>{bird.species}</h2>
             <p id="bRarity">
-            Rarity:{bird.rarity !== "xtra rare" ? bird.rarity : "extra rare" }
+                Rarity:{bird.rarity !== "xtra rare" ? bird.rarity : "extra rare" }
             </p>
-            <ReadMoreReact text={bird.notes} />
-            {'location' in bird && 'lat' in bird.location ? 
-            <p>Location: {bird.location.lat}/{bird.location.long}</p> : 
-            <p>no location</p>}
+            <p>Location: {bird.location.lat}/{bird.location.long}</p> 
+            <ShowMore id="notes">{bird.notes}</ShowMore>
+            
         </div>
     )
 }
